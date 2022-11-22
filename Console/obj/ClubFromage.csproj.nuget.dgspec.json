@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\allard.kazuki\\source\\repos\\ClubFromager\\Console\\ClubFromage.csproj": {}
+    "C:\\Users\\kazut\\OneDrive\\Bureau\\Clubfromage\\Console\\ClubFromage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\allard.kazuki\\source\\repos\\ClubFromager\\Console\\ClubFromage.csproj": {
+    "C:\\Users\\kazut\\OneDrive\\Bureau\\Clubfromage\\Console\\ClubFromage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\allard.kazuki\\source\\repos\\ClubFromager\\Console\\ClubFromage.csproj",
+        "projectUniqueName": "C:\\Users\\kazut\\OneDrive\\Bureau\\Clubfromage\\Console\\ClubFromage.csproj",
         "projectName": "ClubFromage",
-        "projectPath": "C:\\Users\\allard.kazuki\\source\\repos\\ClubFromager\\Console\\ClubFromage.csproj",
-        "packagesPath": "C:\\Users\\allard.kazuki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\allard.kazuki\\source\\repos\\ClubFromager\\Console\\obj\\",
+        "projectPath": "C:\\Users\\kazut\\OneDrive\\Bureau\\Clubfromage\\Console\\ClubFromage.csproj",
+        "packagesPath": "C:\\Users\\kazut\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kazut\\OneDrive\\Bureau\\Clubfromage\\Console\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\allard.kazuki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kazut\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

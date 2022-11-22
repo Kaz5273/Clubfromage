@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -91,7 +92,7 @@ namespace ClubFromage.Model
 
         public void Insert(string table, string values)
         {
-            string query = "INSERT INTO " + table + " VALUES " + values ;
+            string query = "INSERT INTO " + table + " VALUES " + values;
             CUDQuery(query);
 
         }
@@ -112,6 +113,43 @@ namespace ClubFromage.Model
             CUDQuery(query);
 
 
+        }
+
+        private DataSet RQuery(string query)
+        {
+            DataSet dataset = new DataSet();
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Add query data in a DataSet
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+                adapter.Fill(dataset);
+                CloseConnection();
+            }
+            return dataset;
+        }
+
+        public DataTable SelectAll(string table)
+        {
+            string query = "SELECT* FROM " + table;
+            DataSet dataset = RQuery(query);
+            return dataset.Tables[0];
+        }
+
+        public DataRow SelectById(string table, int id)
+        {
+
+            string query = "SELECT* FROM " + table + "where id = '" + id + "'";
+            DataSet dataset = RQuery(query);
+            return dataset.Tables[0].Rows[0];
+        }
+
+        public DataTable SelectByField(string table, string fieldTestCondition)
+        {
+            string query = "SELECT * FROM " + table + "where" +
+            fieldTestCondition;
+            DataSet dataset = RQuery(query);
+            return dataset.Tables[0];
         }
     }
 
