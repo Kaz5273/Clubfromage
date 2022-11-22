@@ -12,9 +12,13 @@ namespace ConsoleApplication2
         static void Main(string[] args)
         {
             Dbal dbal = new Dbal();
-            Pays unPays = new Pays("Hollandeee", 56);
-            DaoPays unDaoPays = new DaoPays(dbal);
-            unDaoPays.Delete(unPays);
+            //Pays unPays = new Pays("Hollandeee", 16);
+            //DaoPays unDaoPays = new DaoPays(dbal);
+            //unDaoPays.Insert(unPays);
+
+            Fromage unFromage = new Fromage(32, "Fromage Suisse", new Pays("Hollandeee", 16) , "Au temps des chevaliers, blablablablablalb", "Du lait de Haute-Savoie, de la patience et c'est t.", 10, new DateTime(2022,08,07), "Fromage-Suisse.png");
+            DaoFromage unDaoFromage = new DaoFromage(dbal);
+            unDaoFromage.Insert(unFromage);
 
 
 

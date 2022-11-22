@@ -17,13 +17,13 @@ namespace ClubFromage.Model
             
         public void Insert(Pays unPays)
         {
-            string  values ="(" + unPays.Id + ", '" + unPays.Name + "') ";
+            string  values ="(" + unPays.Id + ", '" + unPays.Name.Replace("'","''") + "') ";
             undbal.Insert("Pays", values);
         }
         
         public void Update(Pays unPays)
         {
-            string values = " name= '" + unPays.Name + "' ";
+            string values = " name= '" + unPays.Name.Replace("'", "''") + "' ";
             string condition = "id= " + unPays.Id + " ";
             undbal.Update("Pays", values, condition);
         }   
